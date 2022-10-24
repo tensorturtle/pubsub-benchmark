@@ -1,7 +1,7 @@
 # pubsub-benchmark
 Baseline performance metrics for various on-device publisher-subscriber implementations, with a focus on mobile (single board computer) use.
 
-## 
+Python 3.8.10 & Ubuntu 20.04 or 18.04 used throughout.
 
 ## Variables
 
@@ -28,6 +28,73 @@ Preliminary considerations:
 + Nice to have: use [scalene](https://github.com/plasma-umass/scalene) to do performance profiling.
 
 ![](strategy.drawio.svg)
+
+## Run Benchmarks
+
+### Prerequisites
+
+Install poetry
+
+```
+pip3 install poetry
+```
+## Run Benchmarks
+
+### Prerequisites
+
+Install poetry
+
+```
+pip3 install poetry
+```
+
+
+### Python Builtins (asyncio, multithreading)
+
+```
+cd python_builtins
+## Run Benchmarks
+
+### Python Builtins (asyncio, multithreading)
+
+#### Prerequisites 
+
+Install Python
+
+For Ubuntu:
+```
+sudo apt install python3 python3-pip
+```
+
+Install poetry
+
+```
+pip3 install poetry
+```
+
+#### Run benchmark
+
+```
+cd python_builtins
+poetry install
+poetry run python3 python_builtins/main.py
+```
+
+### commaai/cereal
+
+We use the [official Dockerfile](https://github.com/commaai/cereal/blob/master/Dockerfile) to set up cereal within Docker.
+
+[**Install Docker Engine on Ubuntu**](https://docs.docker.com/engine/install/ubuntu/)
+
+
+
+
+
+
+
+
+
+
 
   
 ## Feature Limitations
