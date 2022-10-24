@@ -6,15 +6,14 @@ Python 3.8.10 & Ubuntu 20.04 or 18.04 used throughout.
 ## Variables
 
 + Frameworks
-   + [Python Multiprocessing Queue](https://docs.python.org/3/library/multiprocessing.html?highlight=multiprocessing%20queue#multiprocessing.Queue) - Python 3.8.10
-   + [Python Multithreading Queue](https://docs.python.org/3/library/queue.html) - Python 3.8.10
+   + [Python Multiprocessing Queue](https://docs.python.org/3/library/multiprocessing.html?highlight=multiprocessing%20queue#multiprocessing.Queue)
+   + [Python Multithreading Queue](https://docs.python.org/3/library/queue.html)
    + [ROS2](https://docs.ros.org/) [Humble](https://docs.ros.org/en/rolling/Releases/Release-Humble-Hawksbill.html#humble-hawksbill-humble)
-   + [commaai/cereal](https://github.com/commaai/cereal): "cereal is both a messaging spec for robotics systems as well as generic high performance IPC pub sub messaging" - cloned 2022-10-24
-   + (Maybe) [ZMQ](https://zeromq.org/) via [PyZMQ](https://pyzmq.readthedocs.io/en/latest/)
+   + [commaai/cereal](https://github.com/commaai/cereal) - cloned 2022-10-24
 + Message Sizes
    + Small: Single `char`
-   + Medium: Dictionary of a handful of scalars/floats
-   + Large: RGB image
+   + Medium: `dict` containing a handful of scalars/floats
+   + Large: `numpy` array of RGB image
 + Devices
   + Desktop (Ubuntu 20.04)
   + NVIDIA Jetson Xavier NX (Ubuntu 18.04)
@@ -29,30 +28,6 @@ Preliminary considerations:
 
 ![](strategy.drawio.svg)
 
-## Run Benchmarks
-
-### Prerequisites
-
-Install poetry
-
-```
-pip3 install poetry
-```
-## Run Benchmarks
-
-### Prerequisites
-
-Install poetry
-
-```
-pip3 install poetry
-```
-
-
-### Python Builtins (asyncio, multithreading)
-
-```
-cd python_builtins
 ## Run Benchmarks
 
 ### Python Builtins (asyncio, multithreading)
