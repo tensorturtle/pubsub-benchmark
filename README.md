@@ -19,6 +19,11 @@ Baseline performance metrics for various on-device publisher-subscriber implemen
   
 ## Benchmarking Strategy
 
+Preliminary considerations:
++ Time synchronization cannot be relied on between processes, so timer start/stop should happen within one process.
++ Repeat publish-subscribe `n` times should reduce relative noise from benchmarking logic.
++ Nice to have: use [scalene](https://github.com/plasma-umass/scalene) to do performance profiling.
+
 ![](strategy.drawio.svg)
 
   
