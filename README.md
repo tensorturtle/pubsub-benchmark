@@ -1,5 +1,5 @@
 # pubsub-benchmark
-Baseline performance metrics for various publisher-subscriber implementations, with a focus on mobile (single board computer) use.
+Baseline performance metrics for various on-device publisher-subscriber implementations, with a focus on mobile (single board computer) use.
 
 ## Variables
 
@@ -9,6 +9,9 @@ Baseline performance metrics for various publisher-subscriber implementations, w
    + [ROS2](https://docs.ros.org/)
    + [commaai/cereal](https://github.com/commaai/cereal): "cereal is both a messaging spec for robotics systems as well as generic high performance IPC pub sub messaging"
 + Message Size
+   + Small: Single `char`
+   + Medium: Dictionary of a handful of scalars/floats
+   + Large: RGB image
 + Device
   + Desktop (Ubuntu 20.04)
   + NVIDIA Jetson Xavier NX (Ubuntu 18.04)
