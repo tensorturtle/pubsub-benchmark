@@ -86,6 +86,13 @@ We use the [official Dockerfile](https://github.com/commaai/cereal/blob/master/D
 
 [**Install Docker Engine on Ubuntu**](https://docs.docker.com/engine/install/ubuntu/)
 
+Pull pre-made docker image:
+
+```
+cd cereal_bench
+sudo docker run -it --rm -v $(pwd) tensorturtle/cereal
+```
+
 
 
 
