@@ -30,23 +30,6 @@ Preliminary considerations:
 
 ## Run Benchmarks
 
-### Prerequisites
-
-Install poetry
-
-```
-pip3 install poetry
-```
-
-
-### Python Builtins (asyncio, multithreading)
-
-```
-cd python_builtins
-```
-
-## Run Benchmarks
-
 ### Python Builtins (asyncio, multithreading)
 
 #### Prerequisites 
