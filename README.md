@@ -8,6 +8,7 @@ Baseline performance metrics for various on-device publisher-subscriber implemen
    + [Python Multithreading Queue](https://docs.python.org/3/library/queue.html) - Python 3.8.10
    + [ROS2](https://docs.ros.org/) [Humble](https://docs.ros.org/en/rolling/Releases/Release-Humble-Hawksbill.html#humble-hawksbill-humble)
    + [commaai/cereal](https://github.com/commaai/cereal): "cereal is both a messaging spec for robotics systems as well as generic high performance IPC pub sub messaging" - cloned 2022-10-24
+   + (Maybe) [ZMQ](https://zeromq.org/) via [PyZMQ](https://pyzmq.readthedocs.io/en/latest/)
 + Message Sizes
    + Small: Single `char`
    + Medium: Dictionary of a handful of scalars/floats
