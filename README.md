@@ -30,6 +30,16 @@ Preliminary considerations:
 
 ## Run Benchmarks
 
+```
+git clone --recurse-submodules https://github.com/tensorturtle/pubsub-benchmark.git
+```
+
+If you forgot to update submodules:
+
+```
+git submodule update --init --recursive
+```
+
 ### Python Builtins (asyncio, multithreading)
 
 #### Prerequisites 
@@ -65,20 +75,17 @@ Pull pre-made docker image:
 
 ```
 cd cereal_bench
-sudo docker run -it --rm -v $(pwd) tensorturtle/cereal
+sudo docker run -it --rm -v $(pwd):/root tensorturtle/cereal
+```
+
+To build the docker image yourself, use the [official cereal Dockerfile](https://github.com/commaai/cereal/blob/master/Dockerfile)
+
+Then, in the docker shell,
+
+```
 ```
 
 
-
-
-
-
-
-
-
-
-
-  
 ## Feature Limitations
 
 **commaai/cereal** has the fewest features, so we use its "one publisher, multiple subscriber" as the lowest common denominator basis for benchmarking.

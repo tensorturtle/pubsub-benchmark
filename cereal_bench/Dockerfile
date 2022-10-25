@@ -30,6 +30,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     xz-utils \
     zlib1g-dev \
+    python3 \
+    python3-pip \
   && rm -rf /var/lib/apt/lists/*
 
 RUN curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
@@ -37,7 +39,7 @@ ENV PATH="/root/.pyenv/bin:/root/.pyenv/shims:${PATH}"
 RUN pyenv install 3.8.10 && \
     pyenv global 3.8.10 && \
     pyenv rehash && \
-    pip3 install --no-cache-dir pyyaml==5.1.2 Cython==0.29.14 scons==3.1.1 pycapnp==1.0.0 pre-commit==2.15.0 pylint==2.5.2 parameterized==0.7.4 coverage==5.1 numpy==1.21.1
+    pip3 install --no-cache-dir pyyaml==5.1.2 Cython==0.29.14 scons==3.1.1 pycapnp==1.2.1 pre-commit==2.15.0 pylint==2.5.2 parameterized==0.7.4 coverage==5.1 numpy==1.21.1
 
 WORKDIR /project/cereal/messaging
 RUN git clone https://github.com/catchorg/Catch2.git && \
@@ -51,12 +53,6 @@ WORKDIR /project/cereal
 
 ENV PYTHONPATH=/project
 
-COPY . .
+COPY cereal .
 RUN rm -rf .git && \
     scons -c && scons -j$(nproc)
-
-WORKDIR /root
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends python3 python3-pip && \
-    pip3 install poetry
