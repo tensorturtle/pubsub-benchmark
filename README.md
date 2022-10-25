@@ -75,7 +75,7 @@ Simply:
 ./run_cereal.sh
 ```
 
-(or, if you want to build the docker image yourself, run `./build_cereal.sh`.)
+(or, if you want to build the docker image yourself, run `./build_cereal.sh` before that)
 
 Inside the docker shell:
 ```
