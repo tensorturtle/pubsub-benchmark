@@ -80,8 +80,16 @@ Simply:
 Inside the docker shell:
 ```
 cd /benchmark
-python3 main.py
+python3 pub.py
 ```
+
+In another docker shell,
+```
+cd /benchmark
+python3 sub.py
+```
+
+#TODO: Write capnp and services.py to match testing data
 
 
 ## Feature Limitations
