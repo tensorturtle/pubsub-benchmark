@@ -1,3 +1,0 @@
-[submodule "cereal_bench/cereal"]
-	path = cereal_bench/cereal
-	url = https://github.com/commaai/cereal.git
