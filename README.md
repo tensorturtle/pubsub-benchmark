@@ -31,13 +31,7 @@ Preliminary considerations:
 ## Run Benchmarks
 
 ```
-git clone --recurse-submodules https://github.com/tensorturtle/pubsub-benchmark.git
-```
-
-If you forgot to update submodules:
-
-```
-git submodule update --init --recursive
+git clone https://github.com/tensorturtle/pubsub-benchmark.git
 ```
 
 ### Python Builtins (asyncio, multithreading)
