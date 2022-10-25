@@ -65,6 +65,9 @@ poetry install
 poetry run python3 python_builtins/main.py
 ```
 
+**Notes**
++ At high speeds, Python multiprocessing queue gets concurrency errors (probably need to use locks)
+
 ### commaai/cereal
 
 We use the [official Dockerfile](https://github.com/commaai/cereal/blob/master/Dockerfile) to set up cereal within Docker.
