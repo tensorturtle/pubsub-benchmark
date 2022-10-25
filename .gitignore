@@ -131,3 +131,6 @@ dmypy.json
 # docker renmants
 .bash_history
 .python_history
+
+# cereal repo downloaded to build docker
+cereal_bench/cereal
