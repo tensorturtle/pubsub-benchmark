@@ -68,18 +68,19 @@ We use the [official Dockerfile](https://github.com/commaai/cereal/blob/master/D
 
 [**Install Docker Engine on Ubuntu**](https://docs.docker.com/engine/install/ubuntu/)
 
-Pull pre-made docker image:
+
+Simply:
 
 ```
-cd cereal_bench
-sudo docker run -it --rm -v $(pwd):/root tensorturtle/cereal
+./run_cereal.sh
 ```
 
-To build the docker image yourself, use the [official cereal Dockerfile](https://github.com/commaai/cereal/blob/master/Dockerfile)
+(or, if you want to build the docker image yourself, run `./build_cereal.sh`.)
 
-Then, in the docker shell,
-
+Inside the docker shell:
 ```
+cd /benchmark
+python3 main.py
 ```
 
 
