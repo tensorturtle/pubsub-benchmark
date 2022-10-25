@@ -9,7 +9,7 @@ Python 3.8.10 & Ubuntu 20.04 or 18.04 used throughout.
    + [Python Multiprocessing Queue](https://docs.python.org/3/library/multiprocessing.html?highlight=multiprocessing%20queue#multiprocessing.Queue)
    + [Python Asyncio](https://docs.python.org/3/library/asyncio.html)
    + [ROS2](https://docs.ros.org/) [Humble](https://docs.ros.org/en/rolling/Releases/Release-Humble-Hawksbill.html#humble-hawksbill-humble)
-   + [commaai/cereal](https://github.com/commaai/cereal) - cloned 2022-10-24
+   + [commaai/cereal](https://github.com/commaai/cereal)
 + Message Sizes
    + Small: Single `char`
    + Medium: `dict` containing a handful of scalars/floats
