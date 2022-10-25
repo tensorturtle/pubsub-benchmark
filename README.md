@@ -1,5 +1,7 @@
 # pubsub-benchmark
-Baseline performance metrics for various on-device publisher-subscriber implementations, with a focus on mobile (single board computer) use.
+Baseline performance metrics for various on-device publisher-subscriber implementations.
+
+Focused on edge computing (computer vision) use cases.
 
 Python 3.8.10 & Ubuntu 20.04 or 18.04 used throughout.
 
