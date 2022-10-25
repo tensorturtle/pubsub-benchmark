@@ -54,5 +54,6 @@ WORKDIR /project/cereal
 ENV PYTHONPATH=/project
 
 COPY cereal .
-RUN rm -rf .git && \
+RUN pip3 install pycapnp && \
+    rm -rf .git && \
     scons -c && scons -j$(nproc)
