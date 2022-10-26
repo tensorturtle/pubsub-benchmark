@@ -30,11 +30,31 @@ Preliminary considerations:
 
 ![](strategy.drawio.svg)
 
-## Run Benchmarks
+## Run All Benchmarks
 
+Clone this repository
 ```
 git clone https://github.com/tensorturtle/pubsub-benchmark.git
 ```
+
+Install `poetry` and Docker:
+```
+pip3 install poetry
+```
+
+[Install Docker Engine (link for Ubuntu)](https://docs.docker.com/engine/install/ubuntu/)
+
+
+To run the full suite:
+```
+python3 main.py
+```
+This script creates a sqlite3 database `pubsub_results.db` to store the results.
+Then, it creates plots, which are stored in `result_plots` directory.
+
+To run them separately, continue reading.
+
+## Run Individual Benchmarks
 
 ### Python Builtins (asyncio, multithreading)
 
@@ -68,8 +88,6 @@ poetry run python3 python_builtins/main.py
 
 We use the [official Dockerfile](https://github.com/commaai/cereal/blob/master/Dockerfile) to set up cereal within Docker.
 
-[**Install Docker Engine on Ubuntu**](https://docs.docker.com/engine/install/ubuntu/)
-
 
 Simply:
 
@@ -93,6 +111,32 @@ python3 sub.py
 
 #TODO: Write capnp and services.py to match testing data
 
+
+## ROS2 Humble
+
+We use the community-contributed ROS2 Docker image from OSRF
+
+ROS2 requires messages definitions, which are at `custom_msgs/` in this repo.
+
+```
+cd ros2_bench
+docker run -it --rm -v $(pwd)/benchmark:/benchmark osrf/ros:humble-desktop
+```
+
+In separate docker shells,
+```
+/benchmark/ros2_ws/pub_start.sh
+```
+
+```
+/benchmark/ros2_ws/rep_start.sh
+```
+
+```
+/benchmark/ros2_ws/sub_start.sh
+```
+
+This will launch a single repeater node. To launch multiple repeaters, run `rep_start.sh` after incrementing the `NODE_COUNTER` variable in the script. `NODE_COUNTER` starts from 1.
 
 ## Feature Limitations
 
