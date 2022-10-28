@@ -5,7 +5,7 @@ NODE_TYPE=$4
 REP_COUNTER=$5
 
 BENCHMARK_ABS_PATH="/home/jasonsohn/Repos/pubsub-benchmark/ros2_bench/benchmark"
-RESULTS_ABS_PATH="/home/jasonsohn/Repos/pubsub-benchmark/ros2_bench/results"
+RESULTS_ABS_PATH="/home/jasonsohn/Repos/pubsub-benchmark/results"
 
 # if benchmark path is not set, use default
 # assuming user cloned the repo in home directory

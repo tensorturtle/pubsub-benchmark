@@ -4,11 +4,11 @@ import cereal.messaging as messaging
 
 s_to_ms = lambda s: round(s * 1000, 3)
 
-sm = messaging.SubMaster(['carState'])
+sm = messaging.SubMaster(['carParams', 'carState'])
 
 while True:
     t1 = time.time()
-    sm.update(0)
+    sm.update()
     t2 = time.time()
     print(f"Updating submaster: {s_to_ms(t2 - t1)}ms")
 

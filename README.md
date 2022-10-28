@@ -114,6 +114,9 @@ python3 sub.py
 
 ## ROS2 Humble
 
+#TODO: implement medium messages with custom msg definition
+#TODO: databse logging
+
 We use the community-contributed ROS2 Docker image from OSRF
 
 ROS2 requires messages definitions, which are at `custom_msgs/` in this repo.

@@ -1,1 +1,1 @@
-sudo docker run -it --rm -v $(pwd)/benchmark:/benchmark tensorturtle/cereal
+docker run -it --rm -v $(pwd)/benchmark:/benchmark tensorturtle/cereal
